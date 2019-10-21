@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40000000"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        card_view:cardCornerRadius="5dp"
+        android:layout_margin="8dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ll_movie_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            android:adjustViewBounds="true"
+            android:tint="#6F000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:background="@drawable/border"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/movie_image"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/movie_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_name"
+                android:layout_toRightOf="@+id/movie_image"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/movie_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_genres"
+                android:layout_toRightOf="@+id/movie_image"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/movie_image"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/movie_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/movie_popularity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/movie_year"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/movie_voting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/movie_popularity"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:text="@string/synopsis"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
