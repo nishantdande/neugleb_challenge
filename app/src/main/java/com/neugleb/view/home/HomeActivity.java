@@ -39,8 +39,6 @@ public class HomeActivity extends BaseActivity implements HomeViewContract, Movi
                 super.onScrollStateChanged(recyclerView, newState);
 
                 if (!recyclerView.canScrollVertically(1)) {
-                    Toast.makeText(HomeActivity.this, "Last", Toast.LENGTH_LONG).show();
-
                     if (homePresenter != null)
                         homePresenter.getMovies(++mPageCount);
                 }
